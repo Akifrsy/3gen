@@ -1,0 +1,46 @@
+:root {  
+    --width: 100px;
+    --height: 100px;
+    --l-purple: #b781e9;
+    --d-purple: #350a5e;
+    --v-purple: #8a2be2;
+  }
+  
+  body {
+    background: black;
+    margin: 5rem;
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(5, 100px);
+  }
+  
+  .shape {
+    width: var(--width);
+    height: var(--height);
+    clip-path: circle(100% at 0 0);
+  
+  }
+  
+  .shape:nth-child(1),
+  .shape:nth-child(3n+4) {
+    background-color: var(--v-purple); ;
+  }
+  
+  .shape:nth-child(2), 
+  .shape:nth-child(3n+2) {
+    transform: rotate(45deg);
+    background-color: var(--l-purple);
+  }
+  
+  .shape:nth-child(3n+3) {
+    transform: rotate(120deg);
+    background-color: var(--d-purple);
+  }
